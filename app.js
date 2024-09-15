@@ -14,14 +14,13 @@ function lightDarkMode() {
 
 //---------------------------------------------------------------------//
 
-//Word rotation effect for the header
+//Word rotation effect for the about me section
 const words = ["An ambitious", "A committed", "A passionate"];
 let wordIndex = 0;
 
 function changeWord() {
     const wordElement = document.getElementById('changing-word');
     
-    // Fade out the word
     wordElement.style.opacity = 0;
 
     // After the fade-out transition, change the word and fade it in
@@ -38,7 +37,8 @@ setInterval(changeWord, 1000);
 //---------------------------------------------------------------------//
 
 // Function to show the full content of the blog post
-function showPostContent(postId) {
+function displayPostContent(postId) {
+    
     // Hide all other post contents
     const allPostContents = document.querySelectorAll('.post-content');
     allPostContents.forEach(content => {
@@ -48,23 +48,42 @@ function showPostContent(postId) {
     });
 
     // Show the selected post content
-    const selectedPostContent = document.getElementById(postId);
-    if (selectedPostContent.style.display === 'block') {
-        selectedPostContent.style.display = 'none';
-    } else {
-        selectedPostContent.style.display = 'block';
+    const selectedContent = document.getElementById(postId);
+    if (selectedContent.style.display === 'block') {
+        selectedContent.style.display = 'none'; // Toggle off if already visible
+    } 
+    else {
+        selectedContent.style.display = 'block'; // Show the content
     }
 }
+
+//---------------------------------------------------------------------//
+
+// Filter blog posts by category
+function filterPosts(category) {
+    const allPosts = document.querySelectorAll('.blog-post');
+    allPosts.forEach(post => {
+        if (post.getAttribute('data-category') === category || !category) {
+            post.style.display = 'block';
+        } 
+        else {
+            post.style.display = 'none';
+        }
+    });
+}
+
+//---------------------------------------------------------------------//
 
 // Search blog posts
 function searchPosts() {
     const searchQuery = document.getElementById('search').value.toLowerCase();
-    const posts = document.querySelectorAll('.blog-post');
-    posts.forEach(post => {
+    const allPosts = document.querySelectorAll('.blog-post');
+    allPosts.forEach(post => {
         const title = post.querySelector('h4').innerText.toLowerCase();
         if (title.includes(searchQuery)) {
             post.style.display = 'block';
-        } else {
+        } 
+        else {
             post.style.display = 'none';
         }
     });
