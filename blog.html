@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT/Cyber Services Portfolio</title>
+    <link rel="icon" href="ts-favicon.png">
+</head>
+<body>
+    <header>
+        <h1>IT/Cyber Services Portfolio</h1>
+        <nav>
+            <a href="index.html" class="navbutton"><b>Home</b></a>
+            <a href="#services" class="navbutton"><b>Services</b></a>
+            <a href="#about-me" class="navbutton"><b>About</b></a>
+            <a href="#skills" class="navbutton"><b>Skills</b></a>
+            <a href="#projects" class="navbutton"><b>Projects</b></a>
+            <a href="blog.html" class="navbutton"><b>Blog</b></a>
+            <a href="#contact" class="navbutton"><b>Contact</b></a>
+            <button onclick="lightDarkMode()" id="theme-button">
+                <img id="theme-icon" src="sun.png" alt="Theme Icon">
+            </button>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="sidebar">
+            <h3>Filter by</h3>
+            <ul>
+                <li><a href="#" onclick="filterPosts('cyber-security')">Cyber Security</a></li>
+                <li><a href="#" onclick="filterPosts('passwords')">Passwords</a></li>
+                <li><a href="#" onclick="filterPosts('personal-data')">Personal Data</a></li>
+            </ul>
+        </div>
+
+        <!-- Blog Content -->
+        <div class="content" id="blog-posts">
+            <div class="blog-post" data-category="cyber-security" onclick="showPostContent('post1')">
+                <h4>Cyber Security Tips</h4>
+                <p>Learn some of the best practices for staying secure online.</p>
+                <div class="post-content" id="post1">
+                    <p>In today’s increasingly connected world, cyber security is more crucial than ever. With businesses and individuals relying heavily on technology for daily operations and personal activities, the risk of cyber threats is ever-present. Cybercriminals exploit vulnerabilities in systems to steal sensitive data, disrupt operations, and cause financial damage. Whether it’s through phishing attacks, malware, or data breaches, cyber threats can have devastating effects if proper security measures aren’t in place.</p>
+                    <br>
+                    <p>One of the most effective ways to protect yourself from cyber threats is by adopting basic security practices. This includes regularly updating software, using strong, unique passwords, and enabling two-factor authentication. These simple steps can significantly reduce the risk of unauthorized access to your accounts and devices. In addition, being cautious with suspicious emails, links, and attachments helps prevent falling victim to phishing attacks, which are a common method used by hackers to steal personal information.</p>
+                    <br>
+                    <p>Cyber security is not just a concern for large corporations; it’s something that affects everyone. With so much personal and financial data stored online, individuals must be proactive in protecting their digital lives. As cyber threats continue to evolve, staying informed about the latest security practices and tools is essential to maintaining your online safety and privacy.</p>
+                </div>
+            </div>
+            <div class="blog-post" data-category="passwords" onclick="showPostContent('post2')">
+                <h4>How to Create Strong Passwords</h4>
+                <p>Understand how to create passwords that are tough to crack.</p>
+                <div class="post-content" id="post2">
+                    <p>In today’s digital world, creating strong passwords is essential for protecting your personal information. Aim for passwords that are at least 12 characters long and include a mix of uppercase and lowercase letters, numbers, and special symbols. This variety makes it significantly harder for hackers to crack your password. Avoid using easily guessable details like birthdays or common words and sequences.</p>
+                    <br>
+                    <p>Consider using a passphrase—a series of random words or a sentence that only makes sense to you. For example, “PurpleSky$Dances$On7Waves” is both secure and memorable. Also, never reuse passwords across different sites; each account should have a unique password to prevent multiple accounts from being compromised if one is breached.</p>
+                    <br>
+                    <p>To manage the complexity, use a password manager. It securely stores and generates unique passwords for each of your accounts, simplifying the process. Regularly update your passwords to maintain security and stay ahead of potential threats. By following these tips, you can greatly enhance your online safety.</p>    
+                </div>
+            </div>
+            <div class="blog-post" data-category="personal-data" onclick="showPostContent('post3')">
+                <h4>Protecting Your Personal Data</h4>
+                <p>Steps you can take to protect your sensitive personal information.</p>
+                <div class="post-content" id="post3">
+                    <p>In an era where personal data is increasingly valuable, safeguarding your information is crucial. Start by being cautious with the information you share online. Avoid posting sensitive details such as your full name, address, or financial information on public platforms. Ensure your social media privacy settings are configured to limit who can view your personal data.</p>
+                    <br>
+                    <p>Be vigilant about phishing scams and malicious links. Don’t click on suspicious emails or messages, and verify the legitimacy of requests for personal information. Use strong, unique passwords for each of your online accounts, and consider enabling two-factor authentication for an extra layer of security.</p>
+                    <br>
+                    <p>Regularly review your online accounts and data sharing permissions. Delete accounts and applications you no longer use and check for any unusual activity. By staying informed and proactive about your online presence, you can significantly reduce the risk of your personal data being compromised.</p>
+                </div>
+            </div>
+        </div>
+        <div class="right-sidebar">
+            <label for="search">Search:</label>
+            <input type="text" id="search" onkeyup="searchPosts()" placeholder="Search blog posts">
+        </div>
+    </div>
+    <footer>
+        <nav>
+            <ul id="footer-ul">
+                <li><a href="">Home</a></li>
+                <li><a href="">About Me</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="">Privacy Policy</a></li>
+                <li><a href="">Terms of Use</a></li>
+                <li><a href="">Cookie Policy</a></li>
+            </ul>
+        </nav>
+        <p>Copyright &copy; 2024 Tamoor Sohail. All rights reserved.</p>
+    </footer>
+</body>
+</html>
