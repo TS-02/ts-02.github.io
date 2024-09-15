@@ -53,8 +53,7 @@ function showPostContent(postId) {
     const selectedPostContent = document.getElementById(postId);
     if (selectedPostContent.style.display === 'block') {
         selectedPostContent.style.display = 'none'; // Toggle off if already visible
-    } 
-    else {
+    } else {
         selectedPostContent.style.display = 'block'; // Show the content
     }
 }
@@ -67,8 +66,7 @@ function filterPosts(category) {
     posts.forEach(post => {
         if (post.getAttribute('data-category') === category || !category) {
             post.style.display = 'block';
-        } 
-        else {
+        } else {
             post.style.display = 'none';
         }
     });
@@ -84,8 +82,7 @@ function searchPosts() {
         const title = post.querySelector('h4').innerText.toLowerCase();
         if (title.includes(searchQuery)) {
             post.style.display = 'block';
-        } 
-        else {
+        } else {
             post.style.display = 'none';
         }
     });
