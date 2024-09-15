@@ -174,12 +174,12 @@ form input, textarea {
     padding: 20px;
 }
 
-.left-sidebar, .right-sidebar {
+.sidebar, .right-sidebar {
     padding: 20px;
     border: 2px solid #ccc;
 }
 
-.left-sidebar {
+.sidebar {
     flex: 1;
     border-right: none;
 }
