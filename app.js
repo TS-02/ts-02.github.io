@@ -14,13 +14,14 @@ function lightDarkMode() {
 
 //---------------------------------------------------------------------//
 
-//Word rotation effect for the about me section
+//Word rotation effect for the header
 const words = ["An ambitious", "A committed", "A passionate"];
 let wordIndex = 0;
 
 function changeWord() {
     const wordElement = document.getElementById('changing-word');
     
+    // Fade out the word
     wordElement.style.opacity = 0;
 
     // After the fade-out transition, change the word and fade it in
@@ -28,16 +29,18 @@ function changeWord() {
         wordIndex = (wordIndex + 1) % words.length;
         wordElement.textContent = words[wordIndex];
         
+        // Fade in the word
         wordElement.style.opacity = 1;
-    }, 1000);
+    }, 1000); // Matches the transition time of the new word
 }
 
+// Change the word every 1 second
 setInterval(changeWord, 1000);
 
 //---------------------------------------------------------------------//
 
 // Function to show the full content of the blog post
-function displayPostContent(postId) {
+function showPostContent(postId) {
     // Hide all other post contents
     const allPostContents = document.querySelectorAll('.post-content');
     allPostContents.forEach(content => {
@@ -55,6 +58,8 @@ function displayPostContent(postId) {
         selectedPostContent.style.display = 'block'; // Show the content
     }
 }
+
+//---------------------------------------------------------------------//
 
 // Filter blog posts by category
 function filterPosts(category) {
