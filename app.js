@@ -58,8 +58,6 @@ function showPostContent(postId) {
     }
 }
 
-//---------------------------------------------------------------------//
-
 // Filter blog posts by category
 function filterPosts(category) {
     const posts = document.querySelectorAll('.blog-post');
@@ -71,8 +69,6 @@ function filterPosts(category) {
         }
     });
 }
-
-//---------------------------------------------------------------------//
 
 // Search blog posts
 function searchPosts() {
