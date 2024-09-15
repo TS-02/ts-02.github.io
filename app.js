@@ -38,7 +38,6 @@ setInterval(changeWord, 1000);
 
 // Function to show the full content of the blog post
 function displayPostContent(postId) {
-    
     // Hide all other post contents
     const allPostContents = document.querySelectorAll('.post-content');
     allPostContents.forEach(content => {
@@ -48,21 +47,19 @@ function displayPostContent(postId) {
     });
 
     // Show the selected post content
-    const selectedContent = document.getElementById(postId);
-    if (selectedContent.style.display === 'block') {
-        selectedContent.style.display = 'none'; // Toggle off if already visible
+    const selectedPostContent = document.getElementById(postId);
+    if (selectedPostContent.style.display === 'block') {
+        selectedPostContent.style.display = 'none'; // Toggle off if already visible
     } 
     else {
-        selectedContent.style.display = 'block'; // Show the content
+        selectedPostContent.style.display = 'block'; // Show the content
     }
 }
 
-//---------------------------------------------------------------------//
-
 // Filter blog posts by category
 function filterPosts(category) {
-    const allPosts = document.querySelectorAll('.blog-post');
-    allPosts.forEach(post => {
+    const posts = document.querySelectorAll('.blog-post');
+    posts.forEach(post => {
         if (post.getAttribute('data-category') === category || !category) {
             post.style.display = 'block';
         } 
@@ -77,8 +74,8 @@ function filterPosts(category) {
 // Search blog posts
 function searchPosts() {
     const searchQuery = document.getElementById('search').value.toLowerCase();
-    const allPosts = document.querySelectorAll('.blog-post');
-    allPosts.forEach(post => {
+    const posts = document.querySelectorAll('.blog-post');
+    posts.forEach(post => {
         const title = post.querySelector('h4').innerText.toLowerCase();
         if (title.includes(searchQuery)) {
             post.style.display = 'block';
