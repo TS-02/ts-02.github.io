@@ -49,8 +49,8 @@ button img {
 }
 
 .light-dark-mode {
-    background-color: rgb(31, 23, 23);
-    color: white;
+    background-color: rgb(24, 20, 20);
+    color: rgb(190, 179, 179);
 }
 
 main {
@@ -169,8 +169,6 @@ form input, textarea {
     transition: opacity 0.1s ease;
 }
 
-/* Blog Post CSS Onwards */
-
 .container {
     display: flex;
     padding: 20px;
@@ -222,8 +220,12 @@ form input, textarea {
 }
 
 a {
-    /* color: #333; */
     text-decoration: none;
+    color: rgb(73, 129, 201);
+}
+
+ul {
+    list-style-type: none;
 }
 
 a:hover {
