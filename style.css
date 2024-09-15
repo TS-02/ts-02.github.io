@@ -169,17 +169,17 @@ form input, textarea {
     transition: opacity 0.1s ease;
 }
 
-.container {
+.blog-container {
     display: flex;
     padding: 20px;
 }
 
-.sidebar, .right-sidebar {
+.left-sidebar, .right-sidebar {
     padding: 20px;
     border: 2px solid #ccc;
 }
 
-.sidebar {
+.left-sidebar {
     flex: 1;
     border-right: none;
 }
@@ -197,7 +197,7 @@ form input, textarea {
     padding: 5px;
 }
 
-.content {
+.blog-content {
     flex: 3;
     padding: 20px;
 }
